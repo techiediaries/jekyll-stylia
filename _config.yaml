@@ -1,0 +1,64 @@
+# Site wide configuration
+
+title: "techiediaries"
+description: "Techiediaries is a website dedicated to bring you tutorials and articles about the latest software and web technologies. "
+logo: # 120x120 px default image used for Twitter summary card
+teaser: # 400x250 px default teaser image used in image archive grid
+locale: en
+url: ""
+placeholder: "images/placeholder.png"
+# Jekyll configuration
+#incremental: BOOL
+sass:
+  sass_dir: _sass
+  style: compressed
+#permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: rouge
+gems:
+  #- jekyll-minifier 
+  - jekyll-compose
+  - jekyll-paginate 
+  - jekyll-sitemap
+  - jekyll-gist
+
+permalink:   /:categories/:title/
+paginate: 5
+paginate_path: "page:num"
+category_dir: "pages"
+
+# Octopress configuration
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: article
+page_layout: article
+
+# Format titles with titlecase?
+titlecase: true
+
+
+# Site owner
+owner:
+  name:
+  email:
+  twitter:
+  google:
+    ad-client:
+    ad-slot:
+  bio:
+  avatar: bio-photo.jpg # 160x160 px image for author byline
+  disqus-shortname:
+
+compress_html:
+  comments: all
+  endings: all
+  clippings: all  
+jekyll-minifier:
+  exclude: 'atom.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
